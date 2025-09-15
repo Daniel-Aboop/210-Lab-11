@@ -18,10 +18,19 @@ struct Computer{
 void inputComputerData(Computer *roster){
     static int computerNum=1;
     cout<<"Computer Data for Computer #"<<computerNum<<endl;
-
     cout<<"Enter Operating system:";
     getline(cin,roster->operatingsys);
     cout<<endl;
+    cout<<"Enter Ram amount:";
+    cin>>roster->ram;
+    cout<<endl;
+    cout<<"Enter program list:"<<endl;
+    roster->programs=new string[psize];
+    cin.ignore();
+    for(int i=0;i<psize;i++){
+        getline(cin,roster->programs[i]);
+    }
+    
 
     computerNum++;
 }
@@ -30,6 +39,11 @@ void displayComputerData(Computer *roster){
     cout<<"Computer Data for #"<<computerNum<<endl;
     cout<<"Operating System: "<<roster->operatingsys<<endl;
     cout<<"Ram Amount: "<<roster->ram<<"gb"<<endl;
+    cout<<"Programs in system: ";
+    for(int i=0;i<psize;i++){
+        cout<<roster->programs[i]<<",";
+    }
+    cout<<endl;
     computerNum++;
 }
 

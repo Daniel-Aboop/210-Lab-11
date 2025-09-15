@@ -18,6 +18,7 @@ struct Computer{
 
 //inputComputerData() takes a pointer to a Computer Struct
 //Inputs the data for the struct, also initlaizes the array of strings and fills it
+// i got a little confused on how i would do the input for the program array, but i realized that I had to use -> in order to access the member which I forgot.
 void inputComputerData(Computer *roster){
     static int computerNum=1;
     cout<<"Computer Data for Computer #"<<computerNum<<endl;
@@ -36,7 +37,8 @@ void inputComputerData(Computer *roster){
     }
     computerNum++;
 }
-//displayComputerData()
+//displayComputerData() takes a pointer to a Computer Struct
+// finishing this one was easy since it was just using pointers to access the members to output.
 void displayComputerData(Computer *roster){
     static int computerNum=1;
     cout<<endl<<"Computer Data for #"<<computerNum<<endl<<endl;

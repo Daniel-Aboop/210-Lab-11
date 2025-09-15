@@ -5,8 +5,6 @@
 using namespace std;
 const int size=4,psize=3;
 
-
-
 struct Computer{
     public:
     string operatingsys;
@@ -18,7 +16,8 @@ struct Computer{
 }
 };
 
-//
+//inputComputerData() takes a pointer to a Computer Struct
+//Inputs the data for the struct, also initlaizes the array of strings and fills it
 void inputComputerData(Computer *roster){
     static int computerNum=1;
     cout<<"Computer Data for Computer #"<<computerNum<<endl;
@@ -35,11 +34,9 @@ void inputComputerData(Computer *roster){
         cout<<"Program #"<<i+1<<endl;
         getline(cin,roster->programs[i]);
     }
-
-
     computerNum++;
 }
-
+//displayComputerData()
 void displayComputerData(Computer *roster){
     static int computerNum=1;
     cout<<endl<<"Computer Data for #"<<computerNum<<endl<<endl;
@@ -62,6 +59,5 @@ int main(){
     for(int i=0;i<size;i++){
         displayComputerData(&roster[i]);
     }
-
     return 0;
 }

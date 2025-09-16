@@ -2,6 +2,7 @@
 // IDE used: VS Code
 
 #include <iostream>
+#include <string>
 using namespace std;
 const int size=4,psize=3;
 
